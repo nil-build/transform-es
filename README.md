@@ -14,11 +14,12 @@
     glob: ["**/?(*).*", "**/*"],
     globOptions: {},
     cleanDest: true,
-    babelConfig: {...},
+    babelConfig: null, // {...}
     include: /\.js$/,
     exclude: null,
     watch: false,
     watchOptions: {},
+    target: 'node',// node web
 }
 ```
 

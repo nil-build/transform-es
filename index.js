@@ -6,6 +6,8 @@ const debounce = require('debounce');
 const babel = require("babel-core");
 const chalk = require('chalk');
 const babelConfig = require('./babel.config');
+const babelNodeConfig = require('./babel.node.config');
+
 
 const log = function (msg, ...rest) {
     const date = (new Date()).toISOString();
@@ -138,17 +140,26 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
         glob: ["**/?(*).*", "**/*"],
         globOptions: {},
         cleanDest: true,
-        babelConfig: babelConfig,
+        //babelConfig: babelConfig,
         include: /\.js$/,
         exclude: null,
         watch: false,
         watchOptions: {},
+        target: 'node'
     }
 
     appSrc = appSrc || '.';
     appDest = appDest || 'dest';
 
     options = Object.assign({}, defaults, options);
+
+    if (!options.babelConfig) {
+        if (options.target === 'node') {
+            options.babelConfig = babelNodeConfig();
+        } else {
+            options.babelConfig = babelConfig();
+        }
+    }
 
     const appSrcFile = path.resolve(options.cwd, appSrc);
     const stats = fs.statSync(appSrcFile);
