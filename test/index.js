@@ -2,5 +2,5 @@ const transformEs = require('../index');
 
 transformEs('test/src', 'test/dest', {
     watch: true,
-    target: 'node'
+    target: 'web'
 }); 

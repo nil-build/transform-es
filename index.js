@@ -1,4 +1,5 @@
 const path = require('path');
+const execSync = require('child_process').execSync;
 const fs = require("fs-extra");
 const chokidar = require('chokidar');
 const glob = require('fast-glob');
@@ -18,7 +19,17 @@ const error = chalk.bold.red;
 const warning = chalk.keyword('orange');
 const success = chalk.keyword('green');
 
+function installDeps() {
+    const pkgFile = process.cwd() + '/package.json';
+    let pkg = {};
+    if (fs.existsSync(pkgFile)) {
+        pkg = require(pkgFile);
+    }
 
+    if (!pkg.dependencies['babel-runtime']) {
+        execSync('npm install --save babel-runtime');
+    }
+}
 
 function compileFile(srcFile, targetFile, options) {
     const result = babel.transformFileSync(srcFile, options);
@@ -159,6 +170,7 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
             options.babelConfig = babelNodeConfig(options.babelRuntimeHelpers);
         } else {
             options.babelConfig = babelConfig(options.babelRuntimeHelpers);
+            installDeps();
         }
     }
 
