@@ -20,6 +20,7 @@
     watch: false,
     watchOptions: {},
     target: 'node',// node web
+    babelRuntimeHelpers: true, // babelruntmie.helpers 
 }
 ```
 
