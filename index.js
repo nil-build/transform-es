@@ -145,7 +145,8 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
         exclude: null,
         watch: false,
         watchOptions: {},
-        target: 'node'
+        target: 'node', // node web
+        babelRuntimeHelpers: true,
     }
 
     appSrc = appSrc || '.';
@@ -155,9 +156,9 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
 
     if (!options.babelConfig) {
         if (options.target === 'node') {
-            options.babelConfig = babelNodeConfig();
+            options.babelConfig = babelNodeConfig(options.babelRuntimeHelpers);
         } else {
-            options.babelConfig = babelConfig();
+            options.babelConfig = babelConfig(options.babelRuntimeHelpers);
         }
     }
 

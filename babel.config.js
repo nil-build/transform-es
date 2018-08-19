@@ -1,6 +1,6 @@
 const browsers = require('./browserslist.config');
 
-module.exports = function () {
+module.exports = function (babelRuntimeHelpers) {
     const presets = [
         [require.resolve('babel-preset-env'), {
             "targets": {
@@ -32,7 +32,7 @@ module.exports = function () {
             require.resolve("babel-plugin-transform-regenerator"),
             //"babel-plugin-transform-proto-to-assign",//IE10以下不支持__proto__
             [require.resolve("babel-plugin-transform-runtime"), {
-                helpers: true,
+                helpers: babelRuntimeHelpers,
                 polyfill: true,
                 regenerator: true,
             }]
