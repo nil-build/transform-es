@@ -7,6 +7,7 @@ module.exports = function (babelRuntimeOptions) {
                 "ie": 9,
                 "browsers": browsers
             },
+            modules: "commonjs",
             useBuiltIns: false,
         }],
         require.resolve('@babel/preset-react'),
