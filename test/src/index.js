@@ -2,13 +2,15 @@ const path = require('path');
 const fs = require("fs-extra");
 const glob = require('fast-glob');
 
+require('./cjst')
+
+@ta
 class MyApp {
     static a = 3
     title = 'test'
     constructor() {
 
     }
-    @ta
     say() { }
 
     a = () => { }

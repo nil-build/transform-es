@@ -2,13 +2,13 @@ const path = require('path');
 const fs = require("fs-extra");
 const glob = require('fast-glob');
 
+@ta
 class MyApp {
     static a = 3
     title = 'test'
     constructor() {
 
     }
-    @ta
     say() { }
 
     a = () => { }

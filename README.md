@@ -20,7 +20,12 @@
     watch: false,
     watchOptions: {},
     target: 'node',// node web
-    babelRuntimeHelpers: true, // babelruntmie.helpers 
+    babelRuntimeHelpers: true, // remove
+    babelRuntimeOptons: {
+        corejs: 2, // [2]target=web [false]target=node  
+        helpers: true,
+        regenerator: true,
+    }
 }
 ```
 

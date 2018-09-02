@@ -4,10 +4,10 @@ const fs = require("fs-extra");
 const chokidar = require('chokidar');
 const glob = require('fast-glob');
 const debounce = require('debounce');
-const babel = require("babel-core");
+const babel = require("@babel/core");
 const chalk = require('chalk');
-const babelConfig = require('./babel.config');
-const babelNodeConfig = require('./babel.node.config');
+const babelConfig = require('./config/babel.config');
+const babelNodeConfig = require('./config/babel.node.config');
 
 
 const log = function (msg, ...rest) {
@@ -26,8 +26,8 @@ function installDeps() {
         pkg = require(pkgFile);
     }
 
-    if (!pkg.dependencies['babel-runtime']) {
-        execSync('npm install --save babel-runtime');
+    if (!pkg.dependencies || !pkg.dependencies['@babel/runtime']) {
+        execSync('npm install --save @babel/runtime @babel/runtime-corejs2');
     }
 }
 
@@ -157,7 +157,10 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
         watch: false,
         watchOptions: {},
         target: 'node', // node web
-        babelRuntimeHelpers: true,
+        babelRuntimeHelpers: true, // remove
+        babelRuntimeOptions: {
+            helpers: options.babelRuntimeHelpers == null ? true : options.babelRuntimeHelpers
+        }
     }
 
     appSrc = appSrc || '.';
@@ -167,9 +170,9 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
 
     if (!options.babelConfig) {
         if (options.target === 'node') {
-            options.babelConfig = babelNodeConfig(options.babelRuntimeHelpers);
+            options.babelConfig = babelNodeConfig(options.babelRuntimeOptions);
         } else {
-            options.babelConfig = babelConfig(options.babelRuntimeHelpers);
+            options.babelConfig = babelConfig(options.babelRuntimeOptions);
             installDeps();
         }
     }
