@@ -1,6 +1,6 @@
 {
     "name": "transform-es",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": "",
     "keywords": [
         "compile",
@@ -11,21 +11,24 @@
     ],
     "main": "index.js",
     "bin": {},
-    "homepage": "https://github.com/bplok20010/transform-es",
     "author": {
         "name": "nobo.zhou@foxmail.com"
     },
     "bugs": {
-        "url": "https://github.com/bplok20010/transform-es/issues"
+        "url": "https://github.com/nil-build/transform-es/issues"
     },
-    "repository": "https://github.com/bplok20010/transform-es.git",
+    "homepage": "https://github.com/nil-build/transform-es#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nil-build/transform-es.git"
+    },
     "license": "MIT",
     "scripts": {
         "test": "node test/index"
     },
     "files": [
         "*.md",
-        "lib",
+        "config",
         "*.js"
     ],
     "devDependencies": {},
