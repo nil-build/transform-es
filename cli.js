@@ -1,26 +1,26 @@
+#!/usr/bin/env node
+
 var program = require('commander');
-
-
-// program
-//     .version('0.1.0')
-//     .option('-s --size <size>', 'Pizza size', /^(large|medium|small)$/i, 'medium')
-//     .option('-d --drink [drink]', 'Drink', /^(coke|pepsi|izze)$/i)
-//     .parse(process.argv);
-
-// console.log(' size: %j', program.size);
-// console.log(' drink: %j', program.drink);
+var pkg = require('./package.json');
+var transformEs = require('./index');
 
 program
-    .version('0.1.0')
+    .version(pkg.version)
     .option('-w, --watch', 'watch compile dir', true)
-    .option('-f, --file <file>', 'compile file')
-    .option('-d, --dir [dir]', 'compile dir', 'src')
+    .option('-o, --outFile <outFile>', 'compile file')
+    .option('-d, --outDir [outDir]', 'compile dir', 'lib')
     .option('-t, --target [target]', 'compile target', /^node|web$/, 'web')
-    .option('-c, --clear-dir', 'clear dir before compile', true)
+    .option('-c, --clear', 'clear dir before compile', true)
     .parse(process.argv);
 
-console.log(program.target)
-console.log(program.watch)
-console.log(program.file)
+var options = {
+    watch: !!program.watch,
+    target: program.target,
+    cleanDest: !!program.clear,
+};
 
-console.log(program);
+var src = 'src';
+
+if (program.args.length) src = program.args[0];
+
+transformEs(src, program.outFile || program.outDir, options);

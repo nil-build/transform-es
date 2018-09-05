@@ -145,7 +145,7 @@ function watchSrc(appSrc, appDest, options) {
         .on('ready', () => log('%s文件夹监听中...', blue(appSrc)))
 }
 
-module.exports = async function (appSrc = 'src', appDest = 'dest', options = {}) {
+module.exports = async function (appSrc = 'src', appDest = 'lib', options = {}) {
     const defaults = {
         cwd: process.cwd(),
         glob: ["**/?(*).*", "**/*"],

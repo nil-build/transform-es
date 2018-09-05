@@ -6,6 +6,22 @@
 
 `npm install --save transform-es`
 
+## cli
+
+`transform-es src -d lib -t web -c -w`
+
+- `-o, --outFile`
+- `-d, --outDir` 默认 `lib`
+- `-t, --target` 默认 `web`
+- `-c, --clear` 
+- `-w, --watch`
+
+## api
+
+```
+transformEs( src, dest, options );
+```
+
 ## options
 
 ```
@@ -29,19 +45,14 @@
 }
 ```
 
-## api
-
-```
-transformEs( src, dest, options );
-```
-
 ## examples 
 
 ```
 const transformEs = require('transform-es');
 
-transformEs('src', 'dest', {
+transformEs('src', 'lib', {
     watch: true
 });
 
 ```
+
