@@ -19,7 +19,7 @@
     exclude: null,
     watch: false,
     watchOptions: {},
-    target: 'node',// node web
+    target: 'web',// node web
     babelRuntimeHelpers: true, // remove
     babelRuntimeOptons: {
         corejs: 2, // [2]target=web [false]target=node  

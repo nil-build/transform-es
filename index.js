@@ -156,7 +156,7 @@ module.exports = async function (appSrc = 'src', appDest = 'dest', options = {})
         exclude: null,
         watch: false,
         watchOptions: {},
-        target: 'node', // node web
+        target: 'web', // node web
         babelRuntimeHelpers: true, // remove
         babelRuntimeOptions: {
             helpers: options.babelRuntimeHelpers == null ? true : options.babelRuntimeHelpers
