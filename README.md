@@ -1,6 +1,6 @@
 # transform-es
 
-将es6转成node.js下可执行的语法
+对es6, scss, less, css进行转换，并输出到指定目录
 
 ## install
 
@@ -15,6 +15,8 @@
 - `-t, --target` 默认 `web`
 - `-c, --clear` 
 - `-w, --watch`
+- `--ignore` eg: .css,.less 对匹配到的文件不进行复制和转换
+- `--exclude` 对匹配到的文件进行复制，不转换
 
 ## api
 
@@ -31,8 +33,8 @@ transformEs( src, dest, options );
     globOptions: {},
     cleanDest: true,
     babelConfig: null, // {...}
-    include: /\.js$/,
     exclude: null,
+    ignore: null,
     watch: false,
     watchOptions: {},
     target: 'web',// node web

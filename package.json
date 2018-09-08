@@ -1,17 +1,22 @@
 {
     "name": "transform-es",
-    "version": "1.5.1",
+    "version": "2.0.0",
     "description": "",
     "keywords": [
         "compile",
         "babel",
         "es6",
+        "scss",
+        "less",
+        "postcss",
+        "css",
         "build",
+        "transform",
         "nil-build"
     ],
-    "main": "index.js",
+    "main": "lib/index.js",
     "bin": {
-        "transform-es": "./cli.js"
+        "transform-es": "./lib/cli.js"
     },
     "author": {
         "name": "nobo.zhou@foxmail.com"
@@ -30,15 +35,9 @@
     },
     "files": [
         "*.md",
-		"lib",
-		"loaders",
-        "config",
+        "lib",
         "*.js"
     ],
-    "devDependencies": {
-        "less": "^3.8.1",
-        "node-sass": "^4.9.3"
-    },
     "dependencies": {
         "@babel/core": "^7.0.0",
         "@babel/plugin-proposal-async-generator-functions": "^7.0.0",
@@ -70,5 +69,6 @@
         "debounce": "^1.1.0",
         "fast-glob": "^2.2.2",
         "fs-extra": "^7.0.0"
-    }
+    },
+    "devDependencies": {}
 }

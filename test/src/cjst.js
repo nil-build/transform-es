@@ -14,6 +14,9 @@ function toComment(sourceMap) {
 
 console.log(module);
 
+// let a;
+// let a;
+
 module.exports = function (useSourceMap) {
     console.log(322)
 };
