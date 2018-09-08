@@ -1,0 +1,8 @@
+@import "./var";
+
+.sidebar {
+    width: $width;
+    @media screen and (orientation: landscape) {
+      width: 500px;
+    }
+  }

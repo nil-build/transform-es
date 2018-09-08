@@ -10,7 +10,7 @@
 
 `transform-es src -d lib -t web -c -w`
 
-- `-o, --outFile`
+- `-f, --outFile`
 - `-d, --outDir` 默认 `lib`
 - `-t, --target` 默认 `web`
 - `-c, --clear` 

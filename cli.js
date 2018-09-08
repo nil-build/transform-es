@@ -7,7 +7,7 @@ var transformEs = require('./index');
 program
     .version(pkg.version)
     .option('-w, --watch', 'watch compile dir', true)
-    .option('-o, --outFile <outFile>', 'compile file')
+    .option('-f, --outFile <outFile>', 'compile file')
     .option('-d, --outDir [outDir]', 'compile dir', 'lib')
     .option('-t, --target [target]', 'compile target', /^node|web$/, 'web')
     .option('-c, --clear', 'clear dir before compile', true)
