@@ -17,9 +17,12 @@
 - `-t, --target` 转换目标格式：web | node 默认为 web
 - `-c, --clear`  转换前清空输出目录
 - `-w, --watch` 是否监控文件改变
+- `-m, --minify` 压缩JS,SCSS,LESS,CSS文件
+- `--banner` 在每个转换文件顶部添加注释文本
 - `--ignore` 对匹配成功的文件不进行转换和复制 eg: .css,.less 
 - `--exclude` 对匹配成功的文件后只复制不转换 eg: .css,.less 
-- `--modules` 参考 babel  "amd" | "umd" | "systemjs" | "commonjs" | "cjs" |  false 默认 commonjs
+- `--modules` 参考 babel  `"amd" | "umd" | "systemjs" | "commonjs" | "cjs" | false`  默认 commonjs
+- `--useBuiltIns` 参考 babel  `"usage" | "entry" | false` 默认 false
 - `--loose` 参考 babel
 - `--corejs` true | false  参考 babel-runtime
 - `--helpers` true | false 参考 babel-runtime
@@ -41,23 +44,34 @@ transformEs( src, dest, options );
     glob: ["**/?(*).*", "**/*"],
     globOptions: {},
     cleanDest: true,
-    babelConfig: null, // {...}
+    babelConfig: null, // {...} 
     exclude: null,
     ignore: null,
     watch: false,
-    watchOptions: {},
+    watchOptions: {}, // see chokidar
+    minify: false,//压缩JS,SCSS,LESS,CSS文件
+    babelMinifyOptions: {},// babel-preset-minify
     target: 'web',// node web
-    //babelRuntimeHelpers: true, // remove
     modules: "commonjs",// "amd" | "umd" | "systemjs" | "commonjs" | "cjs" | false
     loose: false,
+    useBuiltIns: false, //"usage" | "entry" | false
+    corejs: true,
+    helpers: true,
+    //babelRuntimeHelpers: true, // deprecated
+    regenerator: true,
+    defines: {},
+    banner:null,
     cnpm: false,
-    babelRuntimeOptons: {
-        corejs: 2, // [2]target=web [false]target=node  
+    babelPresetEnvOptions:{},
+    babelRuntimeOptions: {//deprecated
+        corejs: 2, 
         helpers: true,
         regenerator: true,
     }
 }
 ```
+
+> `target=node`时 `babelRuntimeOptions modules loose corejs helpers regenerator`无效
 
 ## examples 
 
