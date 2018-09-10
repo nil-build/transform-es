@@ -18,6 +18,7 @@
 - `-c, --clear`  转换前清空输出目录
 - `-w, --watch` 是否监控文件改变
 - `-m, --minify` 压缩JS,SCSS,LESS,CSS文件
+- `--mode` 转换模式：`none（默认值）、development或production`，production模式下`minify生效` 
 - `--banner` 在每个转换文件顶部添加注释文本
 - `--ignore` 对匹配成功的文件不进行转换和复制 eg: .css,.less 
 - `--exclude` 对匹配成功的文件后只复制不转换 eg: .css,.less 
@@ -40,9 +41,10 @@ transformEs( src, dest, options );
 
 ```
  {
-    cwd: cwd, //当前工作路径
+    cwd: process.cwd(), //当前工作路径
     glob: ["**/?(*).*", "**/*"],
     globOptions: {},
+    mode: 'none', //转换模式：none（默认值）、development或production，production模式下minify生效
     cleanDest: true,
     babelConfig: null, // {...} 
     exclude: null,
@@ -59,8 +61,9 @@ transformEs( src, dest, options );
     helpers: true,
     //babelRuntimeHelpers: true, // deprecated
     regenerator: true,
+    browsers:null,// array 
     defines: {},
-    banner:null,
+    banner:null, //string function
     cnpm: false,
     babelPresetEnvOptions:{},
     babelRuntimeOptions: {//deprecated

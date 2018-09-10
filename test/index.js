@@ -16,10 +16,10 @@ async function main() {
                 react: '../verdion/react'
             }
         },
-        ignore: /less|css|scss/
+        ignore: /less|scss|css/
     });
 
-    return
+
 
     await transformEs('test/src', 'test/dest-web', {
         babelRuntimeHelpers: true,
