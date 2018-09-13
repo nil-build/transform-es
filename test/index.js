@@ -20,14 +20,15 @@ async function main() {
     });
 
 
-
     await transformEs('test/src', 'test/dest-web', {
-        babelRuntimeHelpers: true,
         banner: 'author: nobo.zhou',
         //watch: true,
         target: 'web',
+        corejs: false,
+        helpers: false,
         //loose: true,
-        ///modules: 'umd',
+        strictMode: false,
+        modules: 'umd',
         defines: {
             "process.env.NODE_ENV": "production",
             "typeof window": "object"
@@ -43,7 +44,6 @@ async function main() {
 
     await transformEs('test/src', 'test/dist', {
         banner: `[name]\n[file]\nauthor: nobo.zhou`,
-        babelRuntimeHelpers: true,
         minify: true,
         target: 'web',
         //loose: true,

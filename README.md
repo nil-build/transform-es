@@ -24,6 +24,7 @@
 - `--exclude` 对匹配成功的文件后只复制不转换 eg: .css,.less 
 - `--modules` 参考 babel  `"amd" | "umd" | "systemjs" | "commonjs" | "cjs" | false`  默认 commonjs
 - `--useBuiltIns` 参考 babel  `"usage" | "entry" | false` 默认 false
+- `--strictMode` true | false 
 - `--loose` 参考 babel
 - `--corejs` true | false  参考 babel-runtime
 - `--helpers` true | false 参考 babel-runtime
@@ -61,6 +62,7 @@ transformEs( src, dest, options );
     helpers: true,
     //babelRuntimeHelpers: true, // deprecated
     regenerator: true,
+    strictMode: true,
     browsers:null,// array 
     defines: {},
     banner:null, //string function
