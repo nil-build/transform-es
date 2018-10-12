@@ -45,7 +45,7 @@ transformEs( src, dest, options );
     cwd: process.cwd(), //当前工作路径
     glob: ["**/?(*).*", "**/*"],
     globOptions: {},
-    mode: 'none', //转换模式：none（默认值）、development或production，production模式下minify生效
+    mode: 'none', //转换模式：none（默认值）、development或production，target=web且为production模式下minify生效，process.env.NODE_ENV=production
     cleanDest: true,
     babelConfig: null, // {...} 
     exclude: null,
@@ -64,6 +64,9 @@ transformEs( src, dest, options );
     regenerator: true,
     strictMode: true,
     browsers:null,// array 
+    resolve: {
+        alias: {}
+    },
     defines: {},
     banner:null, //string function
     cnpm: false,
