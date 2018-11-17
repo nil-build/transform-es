@@ -18,6 +18,7 @@
 - `-c, --clear`  转换前清空输出目录
 - `-w, --watch` 是否监控文件改变
 - `-m, --minify` 压缩JS,SCSS,LESS,CSS文件
+- `--log` 输出日志 true | false 
 - `--mode` 转换模式：`none（默认值）、development或production`，production模式下`minify生效` 
 - `--banner` 在每个转换文件顶部添加注释文本
 - `--ignore` 对匹配成功的文件不进行转换和复制 eg: .css,.less 
@@ -57,6 +58,7 @@ transformEs( src, dest, options );
     target: 'web',// node web
     modules: "commonjs",// "amd" | "umd" | "systemjs" | "commonjs" | "cjs" | false
     loose: false,
+    log: true,
     useBuiltIns: false, //"usage" | "entry" | false
     corejs: true,
     helpers: true,

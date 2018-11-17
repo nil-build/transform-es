@@ -48,6 +48,7 @@ async function main() {
         target: 'web',
         //loose: true,
         ///modules: 'umd',
+        log: false,
         defines: {
             "process.env.NODE_ENV": "production",
             "typeof window": "object"
