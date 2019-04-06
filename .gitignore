@@ -1,3 +1,6 @@
 /node_modules
 /package-lock.json
 /test/dest
+/test/dest-node
+/test/dest-web
+/test/dist
