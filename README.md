@@ -20,6 +20,7 @@
 -   `-d, --outDir` 输出到指定目录，默认为 lib
 -   `-c, --clear` 转换前清空输出目录
 -   `-w, --watch` 是否监控文件改变
+-   `-t, --target` 指定输出目标： web|node 默认`web`, 如果为 web 时会搜索 browserslist，为 node 时则不搜索，使用 targets.node = current
 -   `-m, --minify` 压缩 JS,SCSS,LESS,CSS 文件
 -   `--log` 输出日志 true | false
 -   `--config` 配置文件 默认： `transform-es.config.js`
