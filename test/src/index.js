@@ -1,44 +1,41 @@
-const path = require('path');
+const path = require("path");
 const fs = require("fs-extra");
-const glob = require('fast-glob');
+const glob = require("fast-glob");
 
-var t = require('./cjst')
+var t = require("./cjst");
 
-import z from './cjst';
+import z from "./cjst";
 
-@ta
+// @ta
 class MyApp {
-    static a = 3
-    title = 'test'
-    constructor() {
+    static a = 3;
+    title = "test";
+    constructor() {}
+    say() {}
 
-    }
-    say() { }
-
-    a = () => { }
+    a = () => {};
 }
 
 //cst a = 4;
 
-
 async function test() {
-    const a = await '23';
+    const a = await "23";
 }
 
-test()
+test();
 
-new Promise(r => r(1))
+new Promise(r => r(1));
 
 const x = new Set();
 
-module.exports = function (appSrc = 'src', appDist = 'dest', options = {}) {
+module.exports = function(appSrc = "src", appDist = "dest", options = {}) {
     const defaults = {
         cwd: process.cwd(),
         cleanDist: true,
-        globOptions: {},
-    }
+        globOptions: {}
+    };
 
-    appSrc = appSrc || '.';
+    appSrc = appSrc || ".";
 
     options = Object.assign({}, defaults, options);
 
@@ -50,7 +47,7 @@ module.exports = function (appSrc = 'src', appDist = 'dest', options = {}) {
         ["**/?(*).*", "**/*"],
         Object.assign(
             {
-                onlyFiles: false,
+                onlyFiles: false
                 //absolute: true,
             },
             options.globOptions,
@@ -58,12 +55,14 @@ module.exports = function (appSrc = 'src', appDist = 'dest', options = {}) {
                 cwd: path.resolve(options.cwd, appSrc)
             }
         )
-    ).then(files => {
-        files.forEach(file => {
-            const absSrcFile = path.resolve(options.cwd, appSrc, file);
-            const absDestFile = path.resolve(options.cwd, appDist, file);
+    )
+        .then(files => {
+            files.forEach(file => {
+                const absSrcFile = path.resolve(options.cwd, appSrc, file);
+                const absDestFile = path.resolve(options.cwd, appDist, file);
 
-            fs.copySync(absSrcFile, absDestFile);
+                fs.copySync(absSrcFile, absDestFile);
+            });
         })
-    }).catch(console.error)
-}
+        .catch(console.error);
+};
