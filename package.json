@@ -1,70 +1,70 @@
 {
-  "name": "transform-es",
-  "version": "3.1.0",
-  "description": "",
-  "keywords": [
-    "compile",
-    "babel",
-    "es6",
-    "scss",
-    "less",
-    "postcss",
-    "css",
-    "transform-es",
-    "transform",
-    "nil-build"
-  ],
-  "main": "lib/index.js",
-  "bin": {
-    "transform-es": "./lib/cli.js"
-  },
-  "author": {
-    "name": "nobo.zhou@foxmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/nil-build/transform-es/issues"
-  },
-  "homepage": "https://github.com/nil-build/transform-es#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nil-build/transform-es.git"
-  },
-  "license": "MIT",
-  "scripts": {
-    "test": "node test/index",
-    "beta": "npm publish --tag beta",
-    "next": "npm publish --tag next"
-  },
-  "files": [
-    "*.md",
-    "lib",
-    "*.js"
-  ],
-  "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-flow": "^7.0.0",
-    "@babel/runtime": "^7.5.5",
-    "@babel/runtime-corejs2": "^7.5.5",
-    "@babel/runtime-corejs3": "^7.5.5",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "babel-plugin-transform-define": "^1.3.0",
-    "babel-preset-minify": "^0.5.0",
-    "babel-preset-packez": "^0.4.2",
-    "chalk": "^2.4.1",
-    "chokidar": "^3.0.2",
-    "commander": "^3.0.0",
-    "debounce": "^1.1.0",
-    "fast-glob": "^3.0.4",
-    "fs-extra": "^8.1.0",
-    "lodash": "^4.17.15",
-    "rp-queue": "^1.1.0",
-    "single-line-log": "^1.1.2"
-  },
-  "devDependencies": {},
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "transform-es",
+    "version": "3.1.1",
+    "description": "",
+    "keywords": [
+        "compile",
+        "babel",
+        "es6",
+        "scss",
+        "less",
+        "postcss",
+        "css",
+        "transform-es",
+        "transform",
+        "nil-build"
+    ],
+    "main": "lib/index.js",
+    "bin": {
+        "transform-es": "./lib/cli.js"
+    },
+    "author": {
+        "name": "nobo.zhou@foxmail.com"
+    },
+    "bugs": {
+        "url": "https://github.com/nil-build/transform-es/issues"
+    },
+    "homepage": "https://github.com/nil-build/transform-es#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nil-build/transform-es.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "test": "node test/index",
+        "beta": "npm publish --tag beta",
+        "next": "npm publish --tag next"
+    },
+    "files": [
+        "*.md",
+        "lib",
+        "*.js"
+    ],
+    "dependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-flow": "^7.0.0",
+        "@babel/runtime": "^7.5.5",
+        "@babel/runtime-corejs2": "^7.5.5",
+        "@babel/runtime-corejs3": "^7.5.5",
+        "babel-plugin-module-resolver": "^3.1.1",
+        "babel-plugin-transform-define": "^1.3.0",
+        "babel-preset-minify": "^0.5.0",
+        "babel-preset-packez": "^0.4.2",
+        "chalk": "^2.4.1",
+        "chokidar": "^3.0.2",
+        "commander": "^3.0.0",
+        "debounce": "^1.1.0",
+        "fast-glob": "^3.0.4",
+        "fs-extra": "^8.1.0",
+        "lodash": "^4.17.15",
+        "rp-queue": "^1.1.0",
+        "single-line-log": "^1.1.2"
+    },
+    "devDependencies": {},
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

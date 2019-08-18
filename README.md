@@ -2,9 +2,13 @@
 
 对 es6, scss, less, css 进行转换，并输出到指定目录, 目的在于减少平常写脚本时的配置时间
 
-## install
+## install & usage
 
 `npm install --save-dev transform-es`
+
+`npx transform-es init`
+
+`npx transform-es src`
 
 ## cli
 
