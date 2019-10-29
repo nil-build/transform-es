@@ -12,15 +12,17 @@
 
 ## cli
 
-> `transform-es src -d lib -t web -c -w`
+> `transform-es src -d lib -t esm -c -w`
 >
-> `transform-es src -d lib -t web -c -w --cnpm --corejs false --loose --modules amd`
+> `transform-es src -d lib -t web -c -w [-m]`
+
+> `transform-es src -d lib -t node -c -w`
 
 -   `-f, --outFile` 输出到文件，只有单文件转换有效
 -   `-d, --outDir` 输出到指定目录，默认为 lib
 -   `-c, --clear` 转换前清空输出目录
 -   `-w, --watch` 是否监控文件改变
--   `-t, --target` 指定输出目标： web|node 默认`web`, 如果为 web 时会搜索 browserslist，为 node 时则不搜索，使用 targets.node = current
+-   `-t, --target` 指定输出目标： web | node | esm 默认`web`, 如果为 web | esm 时会搜索 browserslist，为 node 时则不搜索
 -   `-m, --minify` 压缩 JS,SCSS,LESS,CSS 文件
 -   `--log` 输出日志 true | false
 -   `--config` 配置文件 默认： `transform-es.config.js`
@@ -29,6 +31,36 @@
 -   `--ignore` 对匹配成功的文件不进行转换和复制 eg: .css,.less
 -   `--exclude` 对匹配成功的文件后只复制不转换 eg: .css,.less
 -   `--cnpm` 使用使用 cnpm 进行安装依赖，国内环境
+-   `--state` 传递给 transform-es.config.js 的数据
+
+### transform-es.config.js
+
+```js
+module.exports = function(options, state) {
+    return {
+        //文件不进行编译，但会复制
+        exclude: null,
+        //文件不进行编译，也不会复制
+        ignore: null,
+        taskRunner: 15,
+        babelOptions: {
+            //...babel options
+            decoratorsBeforeExport: true,
+            strictMode: true,
+            useFlow: true,
+            loose: true,
+            minifyOptions: {},
+            runtimeOptions: {},
+            presets: [],
+            plugins: []
+        },
+        postcssOptions: {},
+        scssOptions: {},
+        lessOptions: {},
+        banner: null
+    };
+};
+```
 
 ## api
 
@@ -60,6 +92,7 @@ transformEs( src, dest, options );
             decoratorsBeforeExport: true,
             strictMode: true,
             useFlow: true,
+            loose: true,
             minify: !!options.minify,
             minifyOptions: {},
             runtimeOptions: {},
