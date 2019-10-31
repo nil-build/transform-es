@@ -1,12 +1,13 @@
-import date from './date'
+import date from "./date";
 
-const uitls = require('./utils');
+const uitls = require("./utils");
 
 date();
 
 uitls.a();
 
-import c from './c'
+import("./a/b/c");
 
+import c from "./c";
 
-export default 123
+export default 123;
