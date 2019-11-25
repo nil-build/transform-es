@@ -2,8 +2,8 @@ const transformEs = require("../lib/index");
 
 main();
 
-async function main() {
-    await transformEs("test/src", "test/dest-node", {
+function main() {
+    transformEs("test/src", "test/dest-node", {
         banner: "author: nobo.zhou",
         babelOptions: {
             targets: {
@@ -13,7 +13,7 @@ async function main() {
         ignore: /less|scss|css/
     });
 
-    await transformEs("test/src", "test/dest-web-esm", {
+    transformEs("test/src", "test/dest-web-esm", {
         banner: "author: nobo.zhou",
         babelOptions: {
             loose: true,
@@ -22,7 +22,7 @@ async function main() {
         ignore: /less|css|scss/
     });
 
-    await transformEs("test/src", "test/dest-web-cjs", {
+    transformEs("test/src", "test/dest-web-cjs", {
         banner: "author: nobo.zhou",
         babelOptions: {
             useBuiltIns: "usage",
@@ -33,7 +33,7 @@ async function main() {
         ignore: /less|css|scss/
     });
 
-    await transformEs("test/src", "test/dist", {
+    transformEs("test/src", "test/dist", {
         banner: `[name]\n[file]\nauthor: nobo.zhou`,
 
         log: false,
