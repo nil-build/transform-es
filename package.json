@@ -61,6 +61,7 @@
         "gulp-watch": "^5.0.1",
         "less": "^3.10.3",
         "lodash": "^4.17.15",
+        "log-update": "^3.3.0",
         "postcss": "^7.0.23",
         "postcss-flexbugs-fixes": "^4.1.0",
         "postcss-preset-env": "^6.7.0",
