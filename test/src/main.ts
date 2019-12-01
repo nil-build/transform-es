@@ -11,6 +11,7 @@ class Snake extends Animal {
     }
     move(distanceInMeters = 5) {
         console.log("Slithering...");
+        // console.log(smg);
         super.move(distanceInMeters);
     }
 }
