@@ -4,13 +4,7 @@ main();
 
 function main() {
     transformEs("test/src", "test/dest-node", {
-        banner: "author: nobo.zhou",
-        babelOptions: {
-            targets: {
-                node: "current"
-            }
-        },
-        ignore: /less|scss|css/
+        watch: true
     });
 
     // transformEs("test/src", "test/dest-web-esm", {
