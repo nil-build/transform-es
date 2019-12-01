@@ -1,6 +1,6 @@
 {
     "name": "transform-es",
-    "version": "4.3.1",
+    "version": "4.4.0",
     "description": "",
     "keywords": [
         "compile",
@@ -43,13 +43,17 @@
     "dependencies": {
         "@babel/core": "^7.7.4",
         "@types/react": "^16.9.13",
+        "babel-eslint": "^10.0.3",
         "babel-preset-packez": "^0.7.2",
         "chalk": "^2.4.2",
         "commander": "^3.0.0",
+        "eslint": "^6.7.2",
+        "eslint-config-packez": "^0.3.0",
         "fs-extra": "^8.1.0",
         "glob": "^7.1.6",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
+        "gulp-eslint": "^6.0.0",
         "gulp-if": "^3.0.0",
         "gulp-less": "^4.0.1",
         "gulp-postcss": "^8.0.0",
@@ -66,7 +70,9 @@
         "through2": "^3.0.1",
         "typescript": "^3.7.2"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "react": "^16.12.0"
+    },
     "browserslist": [
         ">=0.2%",
         "not dead",
