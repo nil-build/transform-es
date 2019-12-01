@@ -42,6 +42,7 @@ module.exports = function(options, state) {
             plugins: []
         },
         postcss: {},
+        //compilerOptions
         typescript: {}
     };
 };
@@ -73,6 +74,7 @@ transformEs( src, dest, options );
             ...presetOptions
         },
         postcss: {},
+        //compilerOptions
         typescript: {}
     }
 ```
