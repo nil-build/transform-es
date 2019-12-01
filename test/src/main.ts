@@ -1,12 +1,32 @@
-function f1(a: number): string {
-    return "str";
+class Animal {
+    constructor(public name: string) {}
+    move(distanceInMeters: number = 0) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
 }
-function f21(a: number): string {
-    return "str";
+
+class Snake extends Animal {
+    constructor(name: string) {
+        super(name);
+    }
+    move(distanceInMeters = 5) {
+        console.log("Slithering...");
+        super.move(distanceInMeters);
+    }
 }
-function f31(a: number): string {
-    return "11str11";
+
+class Horse extends Animal {
+    constructor(name: string) {
+        super(name);
+    }
+    move(distanceInMeters = 45) {
+        console.log("Galloping...");
+        super.move(distanceInMeters);
+    }
 }
-function f321(a: number): string {
-    return "11str11";
-}
+
+let sam = new Snake("Sammy the Python");
+let tom: Animal = new Horse("Tommy the Palomino");
+
+sam.move();
+tom.move(34);
