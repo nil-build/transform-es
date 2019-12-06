@@ -66,8 +66,6 @@ transformEs( src, dest, options );
             strictMode: true,
             useFlow: true,
             loose: true,
-            minify: !!options.minify,
-            minifyOptions: {},
             runtimeOptions: {},
             presets: [],
             plugins: [],
