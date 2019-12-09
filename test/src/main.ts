@@ -1,5 +1,6 @@
 class Animal {
-    constructor(public name: string) {}
+    constructor(name: string) {}
+    name = "ab";
     move(distanceInMeters: number = 0) {
         console.log(`${this.name} moved ${distanceInMeters}m.`);
     }
@@ -21,6 +22,7 @@ class Horse extends Animal {
         super(name);
     }
     move(distanceInMeters = 45) {
+        let s: number = "abc";
         console.log("Galloping...");
         super.move(distanceInMeters);
     }

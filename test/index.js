@@ -4,6 +4,9 @@ main();
 
 function main() {
     transformEs("test/src", "test/dest-node", {
+        filter(file) {
+            return !/\.xc$/.test(file);
+        },
         watch: true
     });
 

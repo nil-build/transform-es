@@ -61,6 +61,7 @@ transformEs( src, dest, options );
         glob: ["**/*", "**/*.*", "**/.*"],
         clean: true, //转换前清空输出目录
         watch: false,
+        filter: null,// file => boolean
         babel: {
             decoratorsBeforeExport: true,
             strictMode: true,

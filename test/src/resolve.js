@@ -12,7 +12,6 @@ require("jquery/log.txt");
 require.resolve("jquery");
 
 function a() {
-    console.log(msg);
 }
 
 console.log(a1, a2);
