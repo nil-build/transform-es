@@ -1,6 +1,6 @@
 {
     "name": "transform-es",
-    "version": "4.6.1",
+    "version": "4.6.2",
     "description": "",
     "keywords": [
         "compile",
@@ -50,7 +50,7 @@
         "chalk": "^2.4.2",
         "commander": "^3.0.0",
         "eslint": "^6.7.2",
-        "eslint-config-packez": "^0.4.1",
+        "eslint-config-packez": "^0.4.2",
         "fs-extra": "^8.1.0",
         "glob": "^7.1.6",
         "gulp": "^4.0.2",
