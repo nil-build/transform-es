@@ -22,6 +22,8 @@ class Horse extends Animal {
         super(name);
     }
     move(distanceInMeters = 45) {
+        let t: any = 1;
+        (t as { value: any }).value = 5;
         let s: number = "abc";
         console.log("Galloping...");
         super.move(distanceInMeters);

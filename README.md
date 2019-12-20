@@ -22,7 +22,7 @@
 -   `-d, --outDir` 输出到指定目录，默认为 lib
 -   `-c, --clean` 转换前清空输出目录
 -   `-w, --watch` 是否监控文件改变
--   `-t, --target` 指定输出目标： web | node | esm 默认`web`, 如果为 web | esm 时会搜索 browserslist，为 node 时则不搜索
+-   `-t, --target` 指定输出目标： node|web|esm|cjs|commonjs|amd|umd|systemjs|auto 默认`web`
 -   `--config` 配置文件 默认： `transform-es.config.js`
 -   `--state` 传递给 transform-es.config.js 的数据
 
@@ -41,6 +41,7 @@ module.exports = function(options, state) {
             presets: [],
             plugins: []
         },
+        eslint: {},
         postcss: {},
         //compilerOptions
         typescript: {}
@@ -73,6 +74,7 @@ transformEs( src, dest, options );
             plugins: [],
             ...presetOptions
         },
+        eslint: {},
         postcss: {},
         //compilerOptions
         typescript: {}
