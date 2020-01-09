@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs-extra");
 const glob = require("fast-glob");
-
+//12
 // @ta
 class MyApp {
     static a = 3;
