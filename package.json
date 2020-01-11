@@ -1,88 +1,87 @@
 {
-    "name": "transform-es",
-    "version": "4.6.5",
-    "description": "",
-    "keywords": [
-        "compile",
-        "babel",
-        "es6",
-        "scss",
-        "less",
-        "postcss",
-        "css",
-        "typescript",
-        "transform-es",
-        "transform",
-        "nil-build"
-    ],
-    "main": "lib/index.js",
-    "bin": {
-        "transform-es": "./lib/cli.js"
-    },
-    "author": {
-        "name": "nobo.zhou@foxmail.com"
-    },
-    "bugs": {
-        "url": "https://github.com/nil-build/transform-es/issues"
-    },
-    "homepage": "https://github.com/nil-build/transform-es#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nil-build/transform-es.git"
-    },
-    "license": "MIT",
-    "scripts": {
-        "test": "node test/index",
-        "beta": "npm publish --tag beta",
-        "next": "npm publish --tag next"
-    },
-    "files": [
-        "*.md",
-        "lib",
-        "*.js"
-    ],
-    "dependencies": {
-        "@babel/core": "^7.7.4",
-        "@types/react": "^16.9.13",
-        "@typescript-eslint/parser": "^2.9.0",
-        "babel-eslint": "^10.0.3",
-        "babel-preset-packez": "^0.7.2",
-        "chalk": "^2.4.2",
-        "commander": "^3.0.0",
-        "eslint": "^6.7.2",
-        "eslint-config-packez": "^0.4.2",
-        "fs-extra": "^8.1.0",
-        "glob": "^7.1.6",
-        "gulp": "^4.0.2",
-        "gulp-babel": "^8.0.0",
-        "gulp-eslint": "^6.0.0",
-        "gulp-if": "^3.0.0",
-        "gulp-less": "^4.0.1",
-        "gulp-postcss": "^8.0.0",
-        "gulp-sass": "^4.0.2",
-        "gulp-typescript": "^6.0.0-alpha.1",
-        "gulp-watch": "^5.0.1",
-        "less": "^3.10.3",
-        "lodash": "^4.17.15",
-        "log-update": "^3.3.0",
-        "postcss": "^7.0.23",
-        "postcss-flexbugs-fixes": "^4.1.0",
-        "postcss-preset-env": "^6.7.0",
-        "rp-queue": "^1.1.0",
-        "through2": "^3.0.1",
-        "typescript": "^3.7.2"
-    },
-    "devDependencies": {
-        "@types/estree": "0.0.42",
-        "react": "^16.12.0"
-    },
-    "browserslist": [
-        ">=0.2%",
-        "not dead",
-        "not op_mini all",
-        "not Android 4.4.3-4.4.4",
-        "not ios_saf < 10",
-        "not Chrome < 50",
-        "firefox ESR"
-    ]
+	"name": "transform-es",
+	"version": "4.6.5",
+	"description": "",
+	"keywords": [
+		"compile",
+		"babel",
+		"es6",
+		"scss",
+		"less",
+		"postcss",
+		"css",
+		"typescript",
+		"transform-es",
+		"transform",
+		"nil-build"
+	],
+	"main": "lib/index.js",
+	"bin": {
+		"transform-es": "./lib/cli.js"
+	},
+	"author": {
+		"name": "nobo.zhou@foxmail.com"
+	},
+	"bugs": {
+		"url": "https://github.com/nil-build/transform-es/issues"
+	},
+	"homepage": "https://github.com/nil-build/transform-es#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nil-build/transform-es.git"
+	},
+	"license": "MIT",
+	"scripts": {
+		"test": "node test/index",
+		"beta": "npm publish --tag beta",
+		"next": "npm publish --tag next"
+	},
+	"files": [
+		"*.md",
+		"lib",
+		"*.js"
+	],
+	"dependencies": {
+		"@babel/core": "^7.7.4",
+		"@types/react": "^16.9.13",
+		"@typescript-eslint/parser": "^2.9.0",
+		"babel-eslint": "^10.0.3",
+		"babel-preset-packez": "^0.7.2",
+		"chalk": "^2.4.2",
+		"commander": "^3.0.0",
+		"eslint": "^6.7.2",
+		"eslint-config-packez": "^0.4.2",
+		"fs-extra": "^8.1.0",
+		"glob": "^7.1.6",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-eslint": "^6.0.0",
+		"gulp-if": "^3.0.0",
+		"gulp-less": "^4.0.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"gulp-watch": "^5.0.1",
+		"less": "^3.10.3",
+		"lodash": "^4.17.15",
+		"log-update": "^3.3.0",
+		"postcss": "^7.0.23",
+		"postcss-flexbugs-fixes": "^4.1.0",
+		"postcss-preset-env": "^6.7.0",
+		"rp-queue": "^1.1.0",
+		"through2": "^3.0.1",
+		"typescript": "^3.7.2"
+	},
+	"devDependencies": {
+		"react": "^16.12.0"
+	},
+	"browserslist": [
+		">=0.2%",
+		"not dead",
+		"not op_mini all",
+		"not Android 4.4.3-4.4.4",
+		"not ios_saf < 10",
+		"not Chrome < 50",
+		"firefox ESR"
+	]
 }
