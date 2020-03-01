@@ -1,6 +1,6 @@
 {
 	"name": "transform-es",
-	"version": "4.6.6",
+	"version": "5.0.0",
 	"description": "",
 	"keywords": [
 		"compile",
@@ -42,14 +42,13 @@
 		"*.js"
 	],
 	"dependencies": {
-		"@babel/core": "^7.7.4",
-		"@types/react": "^16.9.13",
-		"@typescript-eslint/parser": "^2.9.0",
-		"babel-eslint": "^10.0.3",
-		"babel-preset-packez": "^0.7.2",
+		"@babel/core": "^7.8.6",
+		"@types/react": "^16.9.23",
+		"babel-eslint": "^10.1.0",
+		"babel-preset-packez": "^1.0.0",
 		"chalk": "^2.4.2",
 		"commander": "^3.0.0",
-		"eslint": "^6.7.2",
+		"eslint": "^6.8.0",
 		"eslint-config-packez": "^0.4.2",
 		"fs-extra": "^8.1.0",
 		"glob": "^7.1.6",
@@ -59,21 +58,19 @@
 		"gulp-if": "^3.0.0",
 		"gulp-less": "^4.0.1",
 		"gulp-postcss": "^8.0.0",
-		"gulp-sass": "^4.0.2",
-		"gulp-typescript": "^6.0.0-alpha.1",
 		"gulp-watch": "^5.0.1",
-		"less": "^3.10.3",
+		"less": "^3.11.1",
 		"lodash": "^4.17.15",
-		"log-update": "^3.3.0",
-		"postcss": "^7.0.23",
-		"postcss-flexbugs-fixes": "^4.1.0",
+		"log-update": "^3.4.0",
+		"postcss": "^7.0.27",
+		"postcss-flexbugs-fixes": "^4.2.0",
 		"postcss-preset-env": "^6.7.0",
 		"rp-queue": "^1.1.0",
-		"through2": "^3.0.1",
-		"typescript": "^3.7.2"
+		"through2": "^3.0.1"
 	},
 	"devDependencies": {
-		"react": "^16.12.0"
+		"gulp-sass": "^4.0.2",
+		"react": "^16.13.0"
 	},
 	"browserslist": [
 		">=0.2%",

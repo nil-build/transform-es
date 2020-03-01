@@ -30,22 +30,22 @@
 
 ```js
 module.exports = function(options, state) {
-    return {
-        babel: {
-            //...babel options
-            decoratorsBeforeExport: true,
-            strictMode: true,
-            useFlow: true,
-            loose: true,
-            runtimeOptions: {},
-            presets: [],
-            plugins: []
-        },
-        eslint: {},
-        postcss: {},
-        //compilerOptions
-        typescript: {}
-    };
+	return {
+		babel: {
+			//...babel options
+			decoratorsBeforeExport: true,
+			strictMode: true,
+			useFlow: true,
+			loose: true,
+			runtimeOptions: {},
+			presets: [],
+			plugins: [],
+		},
+		eslint: {},
+		postcss: {},
+		//compilerOptions
+		typescript: {},
+	};
 };
 ```
 
@@ -76,8 +76,6 @@ transformEs( src, dest, options );
         },
         eslint: {},
         postcss: {},
-        //compilerOptions
-        typescript: {}
     }
 ```
 
