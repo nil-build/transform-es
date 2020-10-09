@@ -61,13 +61,13 @@
 		"gulp-postcss": "^8.0.0",
 		"gulp-watch": "^5.0.1",
 		"less": "^3.11.2",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.20",
 		"log-update": "^3.4.0",
 		"postcss": "^7.0.31",
 		"postcss-flexbugs-fixes": "^4.2.1",
 		"postcss-preset-env": "^6.7.0",
 		"rp-queue": "^1.1.0",
-		"through2": "^3.0.1"
+		"through2": "^3.0.2"
 	},
 	"devDependencies": {
 		"@types/react": "^16.9.35",
