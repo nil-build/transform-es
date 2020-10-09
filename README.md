@@ -29,7 +29,7 @@
 ### transform-es.config.js
 
 ```js
-module.exports = function(options, state) {
+module.exports = function (options, state) {
 	return {
 		babel: {
 			//...babel options
