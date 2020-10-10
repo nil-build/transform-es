@@ -357,39 +357,39 @@ Array.isArray(vxx);
 	// `bar` exists
 }
 //pipeline-operator
-{
-	const sum = nos => nos.reduce((p, c) => p + +c, 0);
-	const avg = nos => sum(nos) / nos.length;
-	const tail = ([_, ...tail]) => tail;
-	const tailAndAverage = tail |> avg; // valid?
+// {
+// 	const sum = nos => nos.reduce((p, c) => p + +c, 0);
+// 	const avg = nos => sum(nos) / nos.length;
+// 	const tail = ([_, ...tail]) => tail;
+// 	const tailAndAverage = tail |> avg; // valid?
 
-	function double(x) {
-		return x + x;
-	}
-	function add(x, y) {
-		return x + y;
-	}
+// 	function double(x) {
+// 		return x + x;
+// 	}
+// 	function add(x, y) {
+// 		return x + y;
+// 	}
 
-	function boundScore(min, max, score) {
-		return Math.max(min, Math.min(max, score));
-	}
+// 	function boundScore(min, max, score) {
+// 		return Math.max(min, Math.min(max, score));
+// 	}
 
-	let person = { score: 25 };
+// 	let person = { score: 25 };
 
-	let newScore =
-		person.score
-		|> double
-		|> (_ => add(7, _))
-		|> (_ => boundScore(0, 100, _));
+// 	let newScore =
+// 		person.score
+// 		|> double
+// 		|> (_ => add(7, _))
+// 		|> (_ => boundScore(0, 100, _));
 
-	newScore; //=> 57
-}
+// 	newScore; //=> 57
+// }
 //throw-expressions
-{
-	function test(param = throw new Error("required!")) {
-		const test = param === true || throw new Error("Falsey!");
-	}
-}
+// {
+// 	function test(param = throw new Error("required!")) {
+// 		const test = param === true || throw new Error("Falsey!");
+// 	}
+// }
 //react-jsx
 {
 	const Hr = () => {
