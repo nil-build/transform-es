@@ -281,31 +281,31 @@ Array.isArray(vxx);
 //     }
 // }
 //do-expressions
-{
-	let za = do {
-		if (x > 10) {
-			("big");
-		} else {
-			("small");
-		}
-	};
-	// is equivalent to:
-	let zza = x > 10 ? "big" : "small";
-}
+// {
+// 	let za = do {
+// 		if (x > 10) {
+// 			("big");
+// 		} else {
+// 			("small");
+// 		}
+// 	};
+// 	// is equivalent to:
+// 	let zza = x > 10 ? "big" : "small";
+// }
 //function-bind
-{
-	obj::func;
-	// is equivalent to:
-	func.bind(obj)::obj.func;
-	// is equivalent to:
-	obj.func.bind(obj);
+// {
+// 	obj::func;
+// 	// is equivalent to:
+// 	func.bind(obj)::obj.func;
+// 	// is equivalent to:
+// 	obj.func.bind(obj);
 
-	obj::func(val);
-	// is equivalent to:
-	func.call(obj, val)::obj.func(val);
-	// is equivalent to:
-	obj.func.call(obj, val);
-}
+// 	obj::func(val);
+// 	// is equivalent to:
+// 	func.call(obj, val)::obj.func(val);
+// 	// is equivalent to:
+// 	obj.func.call(obj, val);
+// }
 //function-sent
 {
 	function* generator() {

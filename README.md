@@ -34,7 +34,6 @@ module.exports = function (options, state) {
 		babel: {
 			//...babel options
 			decoratorsBeforeExport: true,
-			strictMode: true,
 			useFlow: true,
 			loose: true,
 			runtimeOptions: {},
@@ -43,8 +42,6 @@ module.exports = function (options, state) {
 		},
 		eslint: {},
 		postcss: {},
-		//compilerOptions
-		typescript: {},
 	};
 };
 ```
