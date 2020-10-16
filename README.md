@@ -63,7 +63,6 @@ transformEs( src, dest, options );
         filter: null,// file => boolean
         babel: {
             decoratorsBeforeExport: true,
-            strictMode: true,
             useFlow: true,
             loose: true,
             runtimeOptions: {},
@@ -73,6 +72,17 @@ transformEs( src, dest, options );
         },
         eslint: {},
         postcss: {},
+        // https://www.npmjs.com/package/gulp-dart-scss
+        scss: {},
+        // https://www.npmjs.com/package/gulp-less
+        less: {},
+		    cssModule: {
+			    test: /\.module.(less|scss|css)$/,
+			    esModule: true,
+		    },
+		    raw: {
+			    test: /\.svg$/,
+		    },
     }
 ```
 
