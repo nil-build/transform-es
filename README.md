@@ -83,6 +83,8 @@ transformEs( src, dest, options );
 		    raw: {
 			    test: /\.svg$/,
 		    },
+        // (stream, options, meta) => stream
+        transform: null
     }
 ```
 
