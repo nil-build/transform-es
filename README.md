@@ -61,6 +61,7 @@ transformEs( src, dest, options );
         watch: false,
         ignore: null, // file => boolean
         filter: null,// file => boolean
+        log: true, // 打印转换日志信息
         babel: {
             decoratorsBeforeExport: true,
             useFlow: true,
