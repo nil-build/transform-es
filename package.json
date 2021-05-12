@@ -64,7 +64,7 @@
 		"less": "^3.11.2",
 		"lodash": "^4.17.20",
 		"log-update": "^3.4.0",
-		"postcss": "^7.0.31",
+		"postcss": "^8.2.10",
 		"postcss-flexbugs-fixes": "^4.2.1",
 		"postcss-modules": "^3.2.2",
 		"postcss-preset-env": "^6.7.0",
