@@ -75,6 +75,9 @@
 		"@types/react": "^16.9.52",
 		"react": "^16.13.1"
 	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org"
+	},
 	"browserslist": [
 		">=0.2%",
 		"not dead",

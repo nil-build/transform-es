@@ -33,7 +33,6 @@ module.exports = function (options, state) {
 	return {
 		babel: {
 			//...babel options
-			decoratorsBeforeExport: true,
 			useFlow: true,
 			loose: true,
 			runtimeOptions: {},
@@ -63,7 +62,6 @@ transformEs( src, dest, options );
         filter: null,// file => boolean
         log: true, // 打印转换日志信息
         babel: {
-            decoratorsBeforeExport: true,
             useFlow: true,
             loose: true,
             runtimeOptions: {},
