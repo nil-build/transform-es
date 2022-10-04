@@ -69,7 +69,6 @@ transformEs( src, dest, options );
             plugins: [],
             ...presetOptions
         },
-        eslint: {},
         postcss: {},
         // https://www.npmjs.com/package/gulp-dart-scss
         scss: {},
